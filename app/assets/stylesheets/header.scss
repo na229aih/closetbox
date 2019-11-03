@@ -1,0 +1,28 @@
+.header{
+  padding:2vh 9vw;
+  position: fixed;
+  width: calc(100% - 18vw);
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Ubuntu Mono', monospace;
+  border-bottom: solid 1px;
+
+  &__logo{
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto;
+    
+    &:hover{
+      color: gray;
+    }
+  }
+
+  &__button{
+    padding: 6px 1%;
+    font-style: oblique;
+
+    &:hover{
+      color: gray;
+    }
+  }
+}
