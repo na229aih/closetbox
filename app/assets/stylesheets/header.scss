@@ -11,9 +11,13 @@
     font-size: 24px;
     font-weight: bold;
     margin-right: auto;
-    
-    &:hover{
-      color: gray;
+
+    a{
+      text-decoration: none;
+      color: #333333;
+      &:hover{
+        color: gray;
+      }
     }
   }
 
@@ -21,8 +25,20 @@
     padding: 6px 1%;
     font-style: oblique;
 
-    &:hover{
-      color: gray;
+    a{
+      text-decoration: none;
+      color: #333333;
+      &:hover{
+        color: gray;
+      }
     }
+  }
+
+  img{
+    height: 33px;
+    width: 33px;
+    border: solid 1px rgb(210, 210, 210);
+    border-radius: 40px;
+    object-fit: cover;
   }
 }

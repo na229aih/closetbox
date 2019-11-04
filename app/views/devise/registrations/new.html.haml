@@ -1,0 +1,31 @@
+.devise-header
+  .devise-header__logo
+    = link_to root_path do
+      = fa_icon "instagram"
+      Closet box
+
+.devise-signin-box
+  .devise-signin-box__title
+    ユーザー新規登録
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    .devise-signin-box__image
+      = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+      = f.file_field :image, autofocus: true, class: "devise-signin-box__image__input"
+    .devise-signin-box__form
+      = f.label :ユーザー名, class: "devise-signin-box__form__label"
+      %br/
+      = f.text_field :name, autofocus: true, maxlength: "8", class: "devise-signin-box__form__area"
+    .devise-signin-box__form
+      = f.label :メールアドレス, class: "devise-signin-box__form__label"
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: "devise-signin-box__form__area"
+    .devise-signin-box__form
+      = f.label :パスワード, class: "devise-signin-box__form__label"
+      %br/
+      = f.password_field :password, autocomplete: "new-password", class: "devise-signin-box__form__area"
+    .devise-signin-box__form
+      = f.label :パスワード（確認）, class: "devise-signin-box__form__label"
+      %br/
+      = f.password_field :password_confirmation, autocomplete: "new-password", class: "devise-signin-box__form__area"
+    .devise-signin-box__button
+      = f.submit "登録", class: "devise-signin-box__button__input"
