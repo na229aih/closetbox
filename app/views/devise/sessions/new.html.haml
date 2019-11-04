@@ -1,0 +1,19 @@
+.devise-header
+  .devise-header__logo
+    = link_to root_path do
+      = fa_icon "instagram"
+      Closet box
+
+.devise-login-box
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .devise-login-box__form
+      = f.label :メールアドレス, class: "devise-login-box__form__label"
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: "devise-login-box__form__area"
+    .devise-login-box__form
+      = f.label :パスワード, class: "devise-login-box__form__label"
+      %br/
+      = f.password_field :password, autocomplete: "current-password", class: "devise-login-box__form__area"
+    .devise-login-box__button
+      = f.submit "ログイン", class: "devise-signin-box__button__input"
+
