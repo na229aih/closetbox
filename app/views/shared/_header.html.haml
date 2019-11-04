@@ -1,10 +1,20 @@
 .header
   .header__logo
-    = fa_icon "instagram"
-    Closet box
-
-  .header__button
-    Login
-
-  .header__button
-    Signup
+    = link_to root_path do
+      = fa_icon "instagram"
+      Closet box
+  
+  - if user_signed_in?
+    .header__button
+      = link_to "Logout", destroy_user_session_path, method: :delete
+    .header__button
+      = current_user.name
+    - if current_user.image.url.present?
+      = image_tag current_user.image.url
+    - else
+      = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+  - else
+    .header__button
+      = link_to "Login", new_user_session_path
+    .header__button
+      = link_to "Signup", new_user_registration_path
