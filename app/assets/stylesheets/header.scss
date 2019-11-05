@@ -1,7 +1,5 @@
 .header{
   padding:2vh 9vw;
-  position: fixed;
-  width: calc(100% - 18vw);
   display: flex;
   justify-content: flex-end;
   font-family: 'Ubuntu Mono', monospace;
@@ -34,11 +32,20 @@
     }
   }
 
-  img{
+  a{
     height: 33px;
     width: 33px;
-    border: solid 1px rgb(210, 210, 210);
-    border-radius: 40px;
-    object-fit: cover;
+    
+    img{
+      height: 33px;
+      width: 33px;
+      border: solid 1px rgb(210, 210, 210);
+      border-radius: 40px;
+      object-fit: cover;
+
+      &:hover{
+        border: solid 1px #333333;
+      }
+    }
   }
 }

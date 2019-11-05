@@ -1,0 +1,84 @@
+.user-show-box{
+  padding: 4vh 19vw;
+  display: flex;
+  font-family: 'Ubuntu Mono', monospace;
+  font-style: oblique;
+  border-bottom: solid 1px rgb(210, 210, 210);
+
+  &__image{
+    img{
+      height: 14vw;
+      width: 14vw;
+      border: solid 1px rgb(210, 210, 210);
+      border-radius: 300px;
+      object-fit: cover;
+    }
+  }
+
+  &__name{
+    margin-left: 4vw;
+    margin-top: 6vh;
+
+    &__top-box{
+      font-size: 20px;
+    }
+
+    &__bottom-box{
+      display: flex;
+      margin-top: 3vh;
+
+      .text{
+        margin-right: 2vw;
+      }
+    }
+  }
+
+  &__logout{
+    margin-left: auto;
+    margin-top: 5vh;
+    a{
+      text-decoration: none;
+      color: #333333;
+      border: solid 1px;
+      padding: 8px;
+      &:hover{
+        color: gray;
+      }
+    }
+  }
+}
+
+.item-box{
+  padding: 4vh 11vw;
+  font-family: 'Ubuntu Mono', monospace;
+  font-style: oblique;
+
+  &__category{
+
+    &__title{
+      font-size: 22px;
+      margin-bottom: 8px;
+      margin-left: 8px;
+    }
+
+    &__image{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 58px;
+
+      img{
+        width: 15vw;
+        height: 15vw;
+        object-fit: cover;
+        border-radius: 6px;
+        margin: 3px 3px;
+        border: solid 1px #eeeeee;
+        box-shadow: 2px 2px 4px #eeeeee;
+      }
+    }
+
+    &__not-image{
+      margin-bottom: 58px;
+    }
+  }
+}

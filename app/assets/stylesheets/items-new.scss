@@ -1,0 +1,22 @@
+.items-new{
+  position: fixed;
+  text-align: center;
+  height: 90px;
+  width: 90px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 100px;
+  background: #333333;
+  color: #FFFFFF;
+  font-family: 'Ubuntu Mono', monospace;
+  font-style: oblique;
+
+  .text{
+    padding-top: 20px;
+    font-size: 15px;
+  }
+
+  .icon{
+    font-size: 28px;
+  }
+}

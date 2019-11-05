@@ -1,0 +1,95 @@
+= render "shared/header"
+= render "shared/items-new"
+
+.user-show-box
+  .user-show-box__image
+    - if @user.image.url.present?
+      = image_tag @user.image.url
+    - else
+      = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+
+  .user-show-box__name
+    .user-show-box__name__top-box
+      = current_user.name
+    .user-show-box__name__bottom-box
+      %p.text
+        アイテム
+        = @user.items.length
+        個
+      %p.text
+        投稿0件
+      %p.text
+        フォロワー0人
+      %p.text
+        フォロー中0人
+
+  - if @user.id = current_user.id
+    .user-show-box__logout
+      = link_to "Logout", destroy_user_session_path, method: :delete
+
+.item-box
+  .item-box__category
+    .item-box__category__title
+      アウター
+    - if @outer_items.present?
+      .item-box__category__image
+        - @outer_items.each do |item|
+          = image_tag item.image.url
+    - else
+      .item-box__category__not-image
+        アウターのアイテムはありません
+
+  .item-box__category
+    .item-box__category__title
+      トップス
+    - if @tops_items.present?
+      .item-box__category__image
+        - @tops_items.each do |item|
+          = image_tag item.image.url
+    - else
+      .item-box__category__not-image
+        トップスのアイテムはありません
+
+  .item-box__category
+    .item-box__category__title
+      パンツ
+    - if @pants_items.present?
+      .item-box__category__image
+        - @pants_items.each do |item|
+          = image_tag item.image.url
+    - else
+      .item-box__category__not-image
+        パンツのアイテムはありません
+
+  .item-box__category
+    .item-box__category__title
+      靴
+    - if @shoes_items.present?
+      .item-box__category__image
+        - @shoes_items.each do |item|
+          = image_tag item.image.url
+    - else
+      .item-box__category__not-image
+        靴のアイテムはありません
+
+  .item-box__category
+    .item-box__category__title
+      バッグ
+    - if @bag_items.present?
+      .item-box__category__image
+        - @bag_items.each do |item|
+          = image_tag item.image.url
+    - else
+      .item-box__category__not-image
+        バッグのアイテムはありません
+
+  .item-box__category
+    .item-box__category__title
+      小物
+    - if @accessory_items.present?
+      .item-box__category__image
+        - @accessory_items.each do |item|
+          = image_tag item.image.url
+    - else
+      .item-box__category__not-image
+        小物のアイテムはありません
