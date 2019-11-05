@@ -6,13 +6,13 @@
   
   - if user_signed_in?
     .header__button
-      = link_to "Logout", destroy_user_session_path, method: :delete
-    .header__button
       = current_user.name
     - if current_user.image.url.present?
-      = image_tag current_user.image.url
+      = link_to "/users/#{current_user.id}" do
+        = image_tag current_user.image.url
     - else
-      = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+      = link_to "/users/#{current_user.id}" do
+        = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
   - else
     .header__button
       = link_to "Login", new_user_session_path
