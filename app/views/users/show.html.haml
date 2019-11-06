@@ -1,5 +1,6 @@
 = render "shared/header"
 = render "shared/items-new"
+= render "shared/coordinates-new"
 
 .user-show-box
   .user-show-box__image
@@ -17,7 +18,9 @@
         = @user.items.length
         個
       %p.text
-        投稿0件
+        投稿
+        = @user.coordinates.length
+        件
       %p.text
         フォロワー0人
       %p.text
@@ -30,7 +33,7 @@
 .item-box
   .item-box__category
     .item-box__category__title
-      アウター
+      Outer
     - if @outer_items.present?
       .item-box__category__image
         - @outer_items.each do |item|
@@ -41,7 +44,7 @@
 
   .item-box__category
     .item-box__category__title
-      トップス
+      Tops
     - if @tops_items.present?
       .item-box__category__image
         - @tops_items.each do |item|
@@ -52,7 +55,7 @@
 
   .item-box__category
     .item-box__category__title
-      パンツ
+      Pants
     - if @pants_items.present?
       .item-box__category__image
         - @pants_items.each do |item|
@@ -63,7 +66,7 @@
 
   .item-box__category
     .item-box__category__title
-      靴
+      Shoes
     - if @shoes_items.present?
       .item-box__category__image
         - @shoes_items.each do |item|
@@ -74,7 +77,7 @@
 
   .item-box__category
     .item-box__category__title
-      バッグ
+      Bag
     - if @bag_items.present?
       .item-box__category__image
         - @bag_items.each do |item|
@@ -85,7 +88,7 @@
 
   .item-box__category
     .item-box__category__title
-      小物
+      Accessory
     - if @accessory_items.present?
       .item-box__category__image
         - @accessory_items.each do |item|
