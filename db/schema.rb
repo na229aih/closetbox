@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_04_094204) do
+ActiveRecord::Schema.define(version: 2019_11_05_123954) do
+
+  create_table "coordinate_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "item_id"
+    t.bigint "coordinate_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["coordinate_id"], name: "index_coordinate_items_on_coordinate_id"
+    t.index ["item_id"], name: "index_coordinate_items_on_item_id"
+  end
+
+  create_table "coordinates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "description"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_coordinates_on_user_id"
+  end
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -38,5 +55,8 @@ ActiveRecord::Schema.define(version: 2019_11_04_094204) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "coordinate_items", "coordinates"
+  add_foreign_key "coordinate_items", "items"
+  add_foreign_key "coordinates", "users"
   add_foreign_key "items", "users"
 end
