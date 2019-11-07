@@ -12,7 +12,7 @@
     .form__box
       = f.label :アイテム名, class: "form__box__label"
       %br/
-      = f.text_field :name, class: "form__box__field"
+      = f.text_field :name, placeholder: "アイテム名", class: "form__box__field"
     .form__box
       = f.label :カテゴリー, class: "form__box__label"
       %br/
@@ -24,6 +24,6 @@
     .form__box
       = f.label :ブランド, class: "form__box__label"
       %br/
-      = f.text_field :brand, class: "form__box__field"
+      = f.text_field :brand, placeholder: "ブランド", class: "form__box__field"
     .form__box
       = f.submit "保存する", class: "form__box__button"

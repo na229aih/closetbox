@@ -34,7 +34,7 @@
 }
 
 .coordinate-form{
-  padding: 2vh 18vw 12vh;
+  padding: 0 18vw 12vh;
 
   &__area{
     width: 100%;
@@ -52,6 +52,8 @@
     font-size: 13px;
     width: 40%;
     margin: 0 19.3vw 0;
+    background: #333333;
+    color: #FFFFFF;
   }
 }
 

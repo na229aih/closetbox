@@ -9,7 +9,7 @@
     img{
       height: 14vw;
       width: 14vw;
-      border: solid 1px rgb(210, 210, 210);
+      border: solid 1px #333333;
       border-radius: 300px;
       object-fit: cover;
     }
@@ -36,11 +36,14 @@
   &__logout{
     margin-left: auto;
     margin-top: 5vh;
+
     a{
       text-decoration: none;
-      color: #333333;
+      background: #333333;
+      color: #FFFFFF;
       border: solid 1px;
       padding: 8px;
+
       &:hover{
         opacity: 0.6;
       }
