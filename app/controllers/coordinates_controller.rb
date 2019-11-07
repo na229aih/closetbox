@@ -1,17 +1,17 @@
 class CoordinatesController < ApplicationController
 
   def index
-    @coordinate = Coordinate.all
+    @coordinates = Coordinate.all.order("id DESC")
   end
 
   def new
     @coordinate = Coordinate.new
-    @outer_items = Item.where(user_id: current_user.id, category: "アウター")
-    @tops_items = Item.where(user_id: current_user.id, category: "トップス")
-    @pants_items = Item.where(user_id: current_user.id, category: "パンツ")
-    @shoes_items = Item.where(user_id: current_user.id, category: "靴")
-    @bag_items = Item.where(user_id: current_user.id, category: "バッグ")
-    @accessory_items = Item.where(user_id: current_user.id, category: "小物")
+    @outer_items = Item.where(user_id: current_user.id, category: "アウター").order("id DESC")
+    @tops_items = Item.where(user_id: current_user.id, category: "トップス").order("id DESC")
+    @pants_items = Item.where(user_id: current_user.id, category: "パンツ").order("id DESC")
+    @shoes_items = Item.where(user_id: current_user.id, category: "靴").order("id DESC")
+    @bag_items = Item.where(user_id: current_user.id, category: "バッグ").order("id DESC")
+    @accessory_items = Item.where(user_id: current_user.id, category: "小物").order("id DESC")
   end
 
   def create
@@ -33,7 +33,7 @@ class CoordinatesController < ApplicationController
     session[:shoes_item_id] = nil
     session[:bag_item_id] = nil
     session[:accessory_item_id] = nil
-    redirect_to "/users/#{current_user.id}"
+    redirect_to root_path
   end
 
   def select_outer
