@@ -516,10 +516,8 @@
         color: #FFFFFF;
         padding: 0 8px;
         
-        &__destroy{
-          &:hover{
-            opacity: 0.7;
-          }
+        &:hover{
+          opacity: 0.7;
         }
       }
     }
