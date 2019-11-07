@@ -66,6 +66,10 @@ class CoordinatesController < ApplicationController
     session[:accessory_item_id] = params[:accessory_item_id].to_i
   end
 
+  def show
+    @coordinate = Coordinate.find(params[:id])
+  end
+
   private
   def coordinate_params
     params.require(:coordinate).permit(:description)
