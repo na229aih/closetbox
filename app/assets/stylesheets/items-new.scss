@@ -11,6 +11,10 @@
   font-family: 'Ubuntu Mono', monospace;
   font-style: oblique;
 
+  &:hover{
+    opacity: 0.6;
+  }
+
   .text{
     padding-top: 20px;
     font-size: 15px;
