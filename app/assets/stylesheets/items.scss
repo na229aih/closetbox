@@ -20,8 +20,6 @@
     text-align: center;
     font-size: 13px;
     line-height: 180px;
-    background: #333333;
-    color: #FFFFFF;
 
     img{
       height: 180px;
@@ -67,6 +65,10 @@
       width: 10vw;
       background: #333333;
       color: #FFFFFF;
+
+      &:hover{
+        opacity: 0.6;
+      }
     }
   }
 }
