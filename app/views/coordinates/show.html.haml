@@ -11,7 +11,7 @@
             Outer
           = image_tag item.image.url
 
-      - if item.category == "トップス"  
+      - if item.category == "トップス"
         .coordinate-show__image-box__unit
           .coordinate-show__image-box__unit__category
             Tops
@@ -58,7 +58,7 @@
       0
     .coordinate-show__user-box__icon
       = fa_icon "comment-o"
-      0
+      = @coordinate.comments.length
   .coordinate-show__description
     = simple_format(@coordinate.description)
 
@@ -66,22 +66,29 @@
     Comment
 
   .coordinate-show__comment-box
-    .coordinate-show__user-box__name
-      = @coordinate.user.name
-    .coordinate-show__user-box__avater
-      - if @coordinate.user.image.url.present?
-        = link_to "/users/#{@coordinate.user.id}" do
-          = image_tag @coordinate.user.image.url
-      - else
-        = link_to "/users/#{@coordinate.user.id}" do
-          = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
-    .coordinate-show__user-box__time
-      = @coordinate.created_at.strftime("%Y/%m/%d %H:%M")
-    .coordinate-show__user-box__icon
-      = fa_icon "heart-o"
-      0
-    .coordinate-show__user-box__icon
-      = fa_icon "comment-o"
-      0
-  .coordinate-show__description
-    = simple_format(@coordinate.description)
+    - @comments.each do |comment|
+      .coordinate-show__comment-box__unit
+        .coordinate-show__comment-box__unit__name
+          = comment.user.name
+        .coordinate-show__comment-box__unit__avater
+          - if comment.user.image.url.present?
+            = link_to "/users/#{comment.user.id}" do
+              = image_tag comment.user.image.url
+          - else
+            = link_to "/users/#{comment.user.id}" do
+              = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+        .coordinate-show__comment-box__unit__time
+          = comment.created_at.strftime("%Y/%m/%d %H:%M")
+        - if user_signed_in?
+          - if current_user == comment.user
+            = link_to "/coordinates/#{@coordinate.id}/comments/#{comment.id}", method: "delete", class: "delete-link" do
+              .coordinate-show__comment-box__unit__destroy
+                削除する
+      .coordinate-show__comment-box__text
+        = simple_format(comment.text)
+
+  - if user_signed_in?
+    .coordinate-show__comment-form
+      = form_with model: [@coordinate, @comment], data: { remote: false } do |f|
+        = f.text_area :text, class: "coordinate-show__comment-form__area"
+        = f.submit "コメントする", class: "coordinate-show__comment-form__button"

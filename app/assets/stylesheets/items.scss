@@ -63,6 +63,12 @@
       padding: 6px;
       font-size: 13px;
       width: 10vw;
+      background: #333333;
+      color: #FFFFFF;
+
+      &:hover{
+        opacity: 0.6;
+      }
     }
   }
 }

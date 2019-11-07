@@ -68,6 +68,8 @@ class CoordinatesController < ApplicationController
 
   def show
     @coordinate = Coordinate.find(params[:id])
+    @comment = Comment.new
+    @comments = @coordinate.comments
   end
 
   private

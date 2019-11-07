@@ -73,5 +73,5 @@
 
 .coordinate-form
   = form_with model: @coordinate, data: { remote: false } do |f|
-    = f.text_area :description, class: "coordinate-form__area"
+    = f.text_area :description,  placeholder: "説明を入力", class: "coordinate-form__area"
     = f.submit "投稿", class: "coordinate-form__button"
