@@ -1,4 +1,5 @@
 = render "shared/header"
+= render "shared/items-new"
 
 .new-title
   コーディネートを投稿する
@@ -72,5 +73,5 @@
 
 .coordinate-form
   = form_with model: @coordinate, data: { remote: false } do |f|
-    = f.text_area :description, class: "coordinate-form__box__area"
-    = f.submit "投稿", class: "coordinate-form__box__button"
+    = f.text_area :description, class: "coordinate-form__area"
+    = f.submit "投稿", class: "coordinate-form__button"

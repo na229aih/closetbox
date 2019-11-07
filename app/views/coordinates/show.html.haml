@@ -1,0 +1,87 @@
+= render "shared/header"
+= render "shared/items-new"
+= render "shared/coordinates-new"
+
+.coordinate-show
+  .coordinate-show__image-box
+    - @coordinate.items.each do |item|
+      - if item.category == "アウター"  
+        .coordinate-show__image-box__unit
+          .coordinate-show__image-box__unit__category
+            Outer
+          = image_tag item.image.url
+
+      - if item.category == "トップス"  
+        .coordinate-show__image-box__unit
+          .coordinate-show__image-box__unit__category
+            Tops
+          = image_tag item.image.url
+
+      - if item.category == "パンツ"  
+        .coordinate-show__image-box__unit
+          .coordinate-show__image-box__unit__category
+            Pants
+          = image_tag item.image.url
+
+      - if item.category == "靴"  
+        .coordinate-show__image-box__unit
+          .coordinate-show__image-box__unit__category
+            Shoes
+          = image_tag item.image.url
+
+      - if item.category == "バッグ"  
+        .coordinate-show__image-box__unit
+          .coordinate-show__image-box__unit__category
+            Bag
+          = image_tag item.image.url
+
+      - if item.category == "小物"  
+        .coordinate-show__image-box__unit
+          .coordinate-show__image-box__unit__category
+            Accessory
+          = image_tag item.image.url
+
+  .coordinate-show__user-box
+    .coordinate-show__user-box__name
+      = @coordinate.user.name
+    .coordinate-show__user-box__avater
+      - if @coordinate.user.image.url.present?
+        = link_to "/users/#{@coordinate.user.id}" do
+          = image_tag @coordinate.user.image.url
+      - else
+        = link_to "/users/#{@coordinate.user.id}" do
+          = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+    .coordinate-show__user-box__time
+      = @coordinate.created_at.strftime("%Y/%m/%d %H:%M")
+    .coordinate-show__user-box__icon
+      = fa_icon "heart-o"
+      0
+    .coordinate-show__user-box__icon
+      = fa_icon "comment-o"
+      0
+  .coordinate-show__description
+    = simple_format(@coordinate.description)
+
+  .coordinate-show__comment-title
+    Comment
+
+  .coordinate-show__comment-box
+    .coordinate-show__user-box__name
+      = @coordinate.user.name
+    .coordinate-show__user-box__avater
+      - if @coordinate.user.image.url.present?
+        = link_to "/users/#{@coordinate.user.id}" do
+          = image_tag @coordinate.user.image.url
+      - else
+        = link_to "/users/#{@coordinate.user.id}" do
+          = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+    .coordinate-show__user-box__time
+      = @coordinate.created_at.strftime("%Y/%m/%d %H:%M")
+    .coordinate-show__user-box__icon
+      = fa_icon "heart-o"
+      0
+    .coordinate-show__user-box__icon
+      = fa_icon "comment-o"
+      0
+  .coordinate-show__description
+    = simple_format(@coordinate.description)

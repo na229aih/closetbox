@@ -33,6 +33,28 @@
   }
 }
 
+.coordinate-form{
+  padding: 2vh 18vw 12vh;
+
+  &__area{
+    width: 100%;
+    height: 80px;
+    background: #FFFFFF;
+    border: solid 1px rgb(210, 210, 210);
+    margin-bottom: 14px;
+  }
+
+  &__button{
+    text-align: center;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 6px;
+    font-size: 13px;
+    width: 40%;
+    margin: 0 19.3vw 0;
+  }
+}
+
 .coordinates-index{
   padding: 5vh 6vw 10vh;
   display: flex;
@@ -45,26 +67,31 @@
     height: 340px;
     width: 400px;
     margin: 10px;
-    display: flex;
-    flex-wrap: wrap;
     background: #333333;
     box-shadow: 2px 2px 4px #eeeeee;
+    display: flex;
+    flex-wrap: wrap;
 
     &:hover{
       opacity: 0.7;
     }
 
-    img{
+    .coordinate-link{
       height: 300px;
       width: 200px;
-      object-fit: cover;
+
+      img{
+        height: 300px;
+        width: 200px;
+        object-fit: cover;
+      }
     }
 
     &__text{
       height: 40px;
-      width: 400px;
       line-height: 40px;
       padding: 0 10px;
+      width: 380px;
       color: #FFFFFF;
       display: flex;
 
@@ -102,27 +129,41 @@
       opacity: 0.7;
     }
 
-    .item-image-1{
+    .coordinate-link-1{
       height: 150px;
       width: 400px;
-      object-fit: cover;
+
+      .item-image-1{
+        height: 150px;
+        width: 400px;
+        object-fit: cover;
+      }
     }
 
-    .item-image-2{
+    .coordinate-link-2{
       height: 150px;
       width: 200px;
-      object-fit: cover;
+
+      .item-image-2{
+        height: 150px;
+        width: 200px;
+        object-fit: cover;
+      }
     }
 
-    .item-image-3{
+    .coordinate-link-3{
       height: 150px;
       width: 200px;
-      object-fit: cover;
+      .item-image-3{
+        height: 150px;
+        width: 200px;
+        object-fit: cover;
+      }
     }
 
     &__text{
       height: 40px;
-      width: 400px;
+      width: 380px;
       line-height: 40px;
       padding: 0 10px;
       color: #FFFFFF;
@@ -162,15 +203,20 @@
       opacity: 0.7;
     }
 
-    img{
+    .coordinate-link{
       height: 150px;
       width: 200px;
-      object-fit: cover;
+
+      img{
+        height: 150px;
+        width: 200px;
+        object-fit: cover;
+      }
     }
 
     &__text{
       height: 40px;
-      width: 400px;
+      width: 380px;
       line-height: 40px;
       padding: 0 10px;
       color: #FFFFFF;
@@ -210,39 +256,64 @@
       opacity: 0.7;
     }
 
-    .item-image-1{
+    .coordinate-link-1{
       height: 150px;
       width: 266.6px;
-      object-fit: cover;
+
+      .item-image-1{
+        height: 150px;
+        width: 266.6px;
+        object-fit: cover;
+      }
     }
 
-    .item-image-2{
+    .coordinate-link-2{
       height: 150px;
       width: 133.3px;
-      object-fit: cover;
+
+      .item-image-2{
+        height: 150px;
+        width: 133.3px;
+        object-fit: cover;
+      }
     }
 
-    .item-image-3{
+    .coordinate-link-3{
       height: 150px;
       width: 133.3px;
-      object-fit: cover;
+
+      .item-image-3{
+        height: 150px;
+        width: 133.3px;
+        object-fit: cover;
+      }
     }
 
-    .item-image-4{
+    .coordinate-link-4{
       height: 150px;
       width: 133.3px;
-      object-fit: cover;
+
+      .item-image-4{
+        height: 150px;
+        width: 133.3px;
+        object-fit: cover;
+      }
     }
 
-    .item-image-5{
+    .coordinate-link-5{
       height: 150px;
       width: 133.3px;
-      object-fit: cover;
+
+      .item-image-5{
+        height: 150px;
+        width: 133.3px;
+        object-fit: cover;
+      }
     }
 
     &__text{
       height: 40px;
-      width: 400px;
+      width: 380px;
       line-height: 40px;
       padding: 0 10px;
       color: #FFFFFF;
@@ -282,15 +353,20 @@
       opacity: 0.7;
     }
 
-    img{
+    .coordinate-link{
       height: 150px;
       width: 133.3px;
-      object-fit: cover;
+
+      img{
+        height: 150px;
+        width: 133.3px;
+        object-fit: cover;
+      }
     }
 
     &__text{
       height: 40px;
-      width: 400px;
+      width: 380px;
       line-height: 40px;
       padding: 0 10px;
       color: #FFFFFF;
@@ -315,5 +391,82 @@
       }
     }
   }
-  
+}
+
+.coordinate-show{
+  padding: 5vh 12vw 10vh;
+  font-family: 'Ubuntu Mono', monospace;
+  font-style: oblique;
+
+  &__image-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5vh; 
+
+    &__unit{
+      height: 400px;
+      width: 340px;
+      margin: 10px;
+
+      &__category{
+        font-size: 18px;
+        margin-bottom: 4px;
+        padding-left: 4px;
+      }
+
+      img{
+        height: 370px;
+        width: 340px;
+        object-fit: cover;
+        border: solid 1px #eeeeee;
+      }
+    }
+  }
+
+  &__user-box{
+    display: flex;
+    height: 50px;
+    width: 90%;
+    line-height: 50px;
+    padding: 0 20px;
+    display: flex;
+
+    &__icon{
+      font-size: 18px;
+      margin-right: 6px;
+    }
+
+    &__name{
+      font-size: 18px;
+      margin-right: 6px;
+    }
+
+    &__time{
+      font-size: 15px;
+      margin-right: 20px;
+      color: gray;
+    }
+
+    &__avater{
+      margin-right: 12px;
+      img{
+        height: 48px;
+        width: 48px;
+        border-radius: 50px;
+        border: solid 1px rgb(210, 210, 210);
+      }
+    }
+  }
+
+  &__description{
+    padding: 10px 20px;
+  }
+
+  &__comment-title{
+    margin: 20px 20px 10px;
+  }
+
+  &__comment-box{
+    margin: 10px 20px;
+  }
 }

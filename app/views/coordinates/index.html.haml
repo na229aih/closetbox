@@ -7,7 +7,8 @@
     - if coordinate.items.length == 2
       .coordinates-index__box2
         - coordinate.items.each do |item|
-          = image_tag item.image.url
+          = link_to "/coordinates/#{coordinate.id}", class: "coordinate-link" do
+            = image_tag item.image.url
         .coordinates-index__box2__text
           .coordinates-index__box2__text__icon
             = fa_icon "heart-o"
@@ -28,7 +29,8 @@
     - elsif coordinate.items.length == 3
       .coordinates-index__box3
         - coordinate.items.each_with_index do |item, i|
-          = image_tag item.image.url, class: "item-image-#{i+1}"
+          = link_to "/coordinates/#{coordinate.id}", class: "coordinate-link-#{i+1}" do
+            = image_tag item.image.url, class: "item-image-#{i+1}"
         .coordinates-index__box3__text
           .coordinates-index__box3__text__icon
             = fa_icon "heart-o"
@@ -50,7 +52,8 @@
     - elsif coordinate.items.length == 4
       .coordinates-index__box4
         - coordinate.items.each do |item|
-          = image_tag item.image.url
+          = link_to "/coordinates/#{coordinate.id}", class: "coordinate-link" do
+            = image_tag item.image.url
         .coordinates-index__box4__text
           .coordinates-index__box4__text__icon
             = fa_icon "heart-o"
@@ -72,7 +75,8 @@
     - elsif coordinate.items.length == 5
       .coordinates-index__box5
         - coordinate.items.each_with_index do |item, i|
-          = image_tag item.image.url, class: "item-image-#{i+1}"
+          = link_to "/coordinates/#{coordinate.id}", class: "coordinate-link-#{i+1}" do
+            = image_tag item.image.url, class: "item-image-#{i+1}"
         .coordinates-index__box5__text
           .coordinates-index__box5__text__icon
             = fa_icon "heart-o"
@@ -94,7 +98,8 @@
     - elsif coordinate.items.length == 6
       .coordinates-index__box6
         - coordinate.items.each do |item|
-          = image_tag item.image.url
+          = link_to "/coordinates/#{coordinate.id}", class: "coordinate-link" do
+            = image_tag item.image.url
         .coordinates-index__box6__text
           .coordinates-index__box6__text__icon
             = fa_icon "heart-o"
