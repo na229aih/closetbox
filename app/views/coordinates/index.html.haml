@@ -2,3 +2,112 @@
 = render "shared/items-new"
 = render "shared/coordinates-new"
 
+.coordinates-index
+  - @coordinates.each do |coordinate|
+    - if coordinate.items.length == 2
+      .coordinates-index__box2
+        - coordinate.items.each do |item|
+          = image_tag item.image.url
+        .coordinates-index__box2__text
+          .coordinates-index__box2__text__icon
+            = fa_icon "heart-o"
+            0
+          .coordinates-index__box2__text__icon
+            = fa_icon "comment-o"
+            0
+          .coordinates-index__box2__text__name
+            = coordinate.user.name
+          .coordinates-index__box2__text__image
+            - if coordinate.user.image.url.present?
+              = link_to "/users/#{coordinate.user.id}" do
+                = image_tag coordinate.user.image.url
+            - else
+              = link_to "/users/#{coordinate.user.id}" do
+                = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+
+    - elsif coordinate.items.length == 3
+      .coordinates-index__box3
+        - coordinate.items.each_with_index do |item, i|
+          = image_tag item.image.url, class: "item-image-#{i+1}"
+        .coordinates-index__box3__text
+          .coordinates-index__box3__text__icon
+            = fa_icon "heart-o"
+            0
+          .coordinates-index__box3__text__icon
+            = fa_icon "comment-o"
+            0
+          .coordinates-index__box3__text__name
+            = coordinate.user.name
+          .coordinates-index__box3__text__image
+            - if coordinate.user.image.url.present?
+              = link_to "/users/#{coordinate.user.id}" do
+                = image_tag coordinate.user.image.url
+            - else
+              = link_to "/users/#{coordinate.user.id}" do
+                = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+
+
+    - elsif coordinate.items.length == 4
+      .coordinates-index__box4
+        - coordinate.items.each do |item|
+          = image_tag item.image.url
+        .coordinates-index__box4__text
+          .coordinates-index__box4__text__icon
+            = fa_icon "heart-o"
+            0
+          .coordinates-index__box4__text__icon
+            = fa_icon "comment-o"
+            0
+          .coordinates-index__box4__text__name
+            = coordinate.user.name
+          .coordinates-index__box4__text__image
+            - if coordinate.user.image.url.present?
+              = link_to "/users/#{coordinate.user.id}" do
+                = image_tag coordinate.user.image.url
+            - else
+              = link_to "/users/#{coordinate.user.id}" do
+                = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+
+
+    - elsif coordinate.items.length == 5
+      .coordinates-index__box5
+        - coordinate.items.each_with_index do |item, i|
+          = image_tag item.image.url, class: "item-image-#{i+1}"
+        .coordinates-index__box5__text
+          .coordinates-index__box5__text__icon
+            = fa_icon "heart-o"
+            0
+          .coordinates-index__box5__text__icon
+            = fa_icon "comment-o"
+            0
+          .coordinates-index__box5__text__name
+            = coordinate.user.name
+          .coordinates-index__box5__text__image
+            - if coordinate.user.image.url.present?
+              = link_to "/users/#{coordinate.user.id}" do
+                = image_tag coordinate.user.image.url
+            - else
+              = link_to "/users/#{coordinate.user.id}" do
+                = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+
+
+    - elsif coordinate.items.length == 6
+      .coordinates-index__box6
+        - coordinate.items.each do |item|
+          = image_tag item.image.url
+        .coordinates-index__box6__text
+          .coordinates-index__box6__text__icon
+            = fa_icon "heart-o"
+            0
+          .coordinates-index__box6__text__icon
+            = fa_icon "comment-o"
+            0
+          .coordinates-index__box6__text__name
+            = coordinate.user.name
+          .coordinates-index__box6__text__image
+            - if coordinate.user.image.url.present?
+              = link_to "/users/#{coordinate.user.id}" do
+                = image_tag coordinate.user.image.url
+            - else
+              = link_to "/users/#{coordinate.user.id}" do
+                = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
