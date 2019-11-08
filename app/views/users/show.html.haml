@@ -11,7 +11,7 @@
 
   .user-show-box__name
     .user-show-box__name__top-box
-      = current_user.name
+      = @user.name
     .user-show-box__name__bottom-box
       %p.text
         アイテム
@@ -37,7 +37,35 @@
     - if @outer_items.present?
       .item-box__category__image
         - @outer_items.each do |item|
-          = image_tag item.image.url
+          .item-image-unit
+            = image_tag item.image.url, class: "item-image-unit__url"
+            .item-image-unit__show
+              - if user_signed_in?
+                - if @user == current_user
+                  = link_to "/items/#{item.id}/edit", class: "item-image-unit__show__button" do
+                    編集
+                  - if item.coordinates.empty?
+                    %br/
+                    = link_to "/items/#{item.id}", method: "delete", class: "item-image-unit__show__button" do
+                      削除
+                  - else
+                    %br/
+                    .item-image-unit__show__button
+                      コーディネート登録済み
+                - else
+                  %br/
+              - else
+                %br/
+              %br/
+              %br/
+              .item-image-unit__show__text
+                = item.name
+              .item-image-unit__show__text
+                SIZE
+                = item.size
+              .item-image-unit__show__text
+                BRAND
+                = item.brand
     - else
       .item-box__category__not-image
         アウターのアイテムはありません
@@ -48,7 +76,35 @@
     - if @tops_items.present?
       .item-box__category__image
         - @tops_items.each do |item|
-          = image_tag item.image.url
+          .item-image-unit
+            = image_tag item.image.url, class: "item-image-unit__url"
+            .item-image-unit__show
+              - if user_signed_in?
+                - if @user == current_user
+                  = link_to "/items/#{item.id}/edit", class: "item-image-unit__show__button" do
+                    編集
+                  - if item.coordinates.empty?
+                    %br/
+                    = link_to "/items/#{item.id}", method: "delete", class: "item-image-unit__show__button" do
+                      削除
+                  - else
+                    %br/
+                    .item-image-unit__show__button
+                      コーディネート登録済み
+                - else
+                  %br/
+              - else
+                %br/
+              %br/
+              %br/
+              .item-image-unit__show__text
+                = item.name
+              .item-image-unit__show__text
+                SIZE
+                = item.size
+              .item-image-unit__show__text
+                BRAND
+                = item.brand
     - else
       .item-box__category__not-image
         トップスのアイテムはありません
@@ -59,7 +115,35 @@
     - if @pants_items.present?
       .item-box__category__image
         - @pants_items.each do |item|
-          = image_tag item.image.url
+          .item-image-unit
+            = image_tag item.image.url, class: "item-image-unit__url"
+            .item-image-unit__show
+              - if user_signed_in?
+                - if @user == current_user
+                  = link_to "/items/#{item.id}/edit", class: "item-image-unit__show__button" do
+                    編集
+                  - if item.coordinates.empty?
+                    %br/
+                    = link_to "/items/#{item.id}", method: "delete", class: "item-image-unit__show__button" do
+                      削除
+                  - else
+                    %br/
+                    .item-image-unit__show__button
+                      コーディネート登録済み
+                - else
+                  %br/
+              - else
+                %br/
+              %br/
+              %br/
+              .item-image-unit__show__text
+                = item.name
+              .item-image-unit__show__text
+                SIZE
+                = item.size
+              .item-image-unit__show__text
+                BRAND
+                = item.brand
     - else
       .item-box__category__not-image
         パンツのアイテムはありません
@@ -70,7 +154,35 @@
     - if @shoes_items.present?
       .item-box__category__image
         - @shoes_items.each do |item|
-          = image_tag item.image.url
+          .item-image-unit
+            = image_tag item.image.url, class: "item-image-unit__url"
+            .item-image-unit__show
+              - if user_signed_in?
+                - if @user == current_user
+                  = link_to "/items/#{item.id}/edit", class: "item-image-unit__show__button" do
+                    編集
+                  - if item.coordinates.empty?
+                    %br/
+                    = link_to "/items/#{item.id}", method: "delete", class: "item-image-unit__show__button" do
+                      削除
+                  - else
+                    %br/
+                    .item-image-unit__show__button
+                      コーディネート登録済み
+                - else
+                  %br/
+              - else
+                %br/
+              %br/
+              %br/
+              .item-image-unit__show__text
+                = item.name
+              .item-image-unit__show__text
+                SIZE
+                = item.size
+              .item-image-unit__show__text
+                BRAND
+                = item.brand
     - else
       .item-box__category__not-image
         靴のアイテムはありません
@@ -81,7 +193,35 @@
     - if @bag_items.present?
       .item-box__category__image
         - @bag_items.each do |item|
-          = image_tag item.image.url
+          .item-image-unit
+            = image_tag item.image.url, class: "item-image-unit__url"
+            .item-image-unit__show
+              - if user_signed_in?
+                - if @user == current_user
+                  = link_to "/items/#{item.id}/edit", class: "item-image-unit__show__button" do
+                    編集
+                  - if item.coordinates.empty?
+                    %br/
+                    = link_to "/items/#{item.id}", method: "delete", class: "item-image-unit__show__button" do
+                      削除
+                  - else
+                    %br/
+                    .item-image-unit__show__button
+                      コーディネート登録済み
+                - else
+                  %br/
+              - else
+                %br/
+              %br/
+              %br/
+              .item-image-unit__show__text
+                = item.name
+              .item-image-unit__show__text
+                SIZE
+                = item.size
+              .item-image-unit__show__text
+                BRAND
+                = item.brand
     - else
       .item-box__category__not-image
         バッグのアイテムはありません
@@ -92,7 +232,35 @@
     - if @accessory_items.present?
       .item-box__category__image
         - @accessory_items.each do |item|
-          = image_tag item.image.url
+          .item-image-unit
+            = image_tag item.image.url, class: "item-image-unit__url"
+            .item-image-unit__show
+              - if user_signed_in?
+                - if @user == current_user
+                  = link_to "/items/#{item.id}/edit", class: "item-image-unit__show__button" do
+                    編集
+                  - if item.coordinates.empty?
+                    %br/
+                    = link_to "/items/#{item.id}", method: "delete", class: "item-image-unit__show__button" do
+                      削除
+                  - else
+                    %br/
+                    .item-image-unit__show__button
+                      コーディネート登録済み
+                - else
+                  %br/
+              - else
+                %br/
+              %br/
+              %br/
+              .item-image-unit__show__text
+                = item.name
+              .item-image-unit__show__text
+                SIZE
+                = item.size
+              .item-image-unit__show__text
+                BRAND
+                = item.brand
     - else
       .item-box__category__not-image
         小物のアイテムはありません
