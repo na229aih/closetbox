@@ -9,37 +9,133 @@
         .coordinate-show__image-box__unit
           .coordinate-show__image-box__unit__category
             Outer
-          = image_tag item.image.url
+          .coordinate-item-image-unit
+            = image_tag item.image.url, class: "coordinate-item-image-unit__url"
+            .coordinate-item-image-unit__show
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              .coordinate-item-image-unit__show__text
+                = item.name
+              .coordinate-item-image-unit__show__text
+                SIZE
+                = item.size
+              .coordinate-item-image-unit__show__text
+                BRAND
+                = item.brand
 
       - if item.category == "トップス"
         .coordinate-show__image-box__unit
           .coordinate-show__image-box__unit__category
             Tops
-          = image_tag item.image.url
+          .coordinate-item-image-unit
+            = image_tag item.image.url, class: "coordinate-item-image-unit__url"
+            .coordinate-item-image-unit__show
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              .coordinate-item-image-unit__show__text
+                = item.name
+              .coordinate-item-image-unit__show__text
+                SIZE
+                = item.size
+              .coordinate-item-image-unit__show__text
+                BRAND
+                = item.brand
 
       - if item.category == "パンツ"  
         .coordinate-show__image-box__unit
           .coordinate-show__image-box__unit__category
             Pants
-          = image_tag item.image.url
+          .coordinate-item-image-unit
+            = image_tag item.image.url, class: "coordinate-item-image-unit__url"
+            .coordinate-item-image-unit__show
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              .coordinate-item-image-unit__show__text
+                = item.name
+              .coordinate-item-image-unit__show__text
+                SIZE
+                = item.size
+              .coordinate-item-image-unit__show__text
+                BRAND
+                = item.brand
 
       - if item.category == "靴"  
         .coordinate-show__image-box__unit
           .coordinate-show__image-box__unit__category
             Shoes
-          = image_tag item.image.url
+          .coordinate-item-image-unit
+            = image_tag item.image.url, class: "coordinate-item-image-unit__url"
+            .coordinate-item-image-unit__show
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              .coordinate-item-image-unit__show__text
+                = item.name
+              .coordinate-item-image-unit__show__text
+                SIZE
+                = item.size
+              .coordinate-item-image-unit__show__text
+                BRAND
+                = item.brand
 
       - if item.category == "バッグ"  
         .coordinate-show__image-box__unit
           .coordinate-show__image-box__unit__category
             Bag
-          = image_tag item.image.url
+          .coordinate-item-image-unit
+            = image_tag item.image.url, class: "coordinate-item-image-unit__url"
+            .coordinate-item-image-unit__show
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              .coordinate-item-image-unit__show__text
+                = item.name
+              .coordinate-item-image-unit__show__text
+                SIZE
+                = item.size
+              .coordinate-item-image-unit__show__text
+                BRAND
+                = item.brand
 
       - if item.category == "小物"  
         .coordinate-show__image-box__unit
           .coordinate-show__image-box__unit__category
             Accessory
-          = image_tag item.image.url
+          .coordinate-item-image-unit
+            = image_tag item.image.url, class: "coordinate-item-image-unit__url"
+            .coordinate-item-image-unit__show
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              %br/
+              .coordinate-item-image-unit__show__text
+                = item.name
+              .coordinate-item-image-unit__show__text
+                SIZE
+                = item.size
+              .coordinate-item-image-unit__show__text
+                BRAND
+                = item.brand
 
   .coordinate-show__user-box
     .coordinate-show__user-box__name

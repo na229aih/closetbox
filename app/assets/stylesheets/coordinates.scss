@@ -424,11 +424,37 @@
         padding-left: 4px;
       }
 
-      img{
+      .coordinate-item-image-unit{
         height: 370px;
         width: 340px;
-        object-fit: cover;
-        border: solid 1px #eeeeee;
+        position: relative;
+        &:hover{
+          .coordinate-item-image-unit__show{
+            display: block;
+          }
+        }
+
+        &__url{
+          height: 370px;
+          width: 340px;
+          object-fit: cover;
+          border: solid 1px #eeeeee;
+        }
+
+        &__show{
+          height: 370px;
+          width: 340px;
+          position: absolute;
+          background: #333333;
+          top: 0;
+          opacity: 0.5;
+          color: #FFFFFF;
+          display: none;
+
+          &__text{
+            text-align: center;
+          }
+        }
       }
     }
   }
@@ -516,10 +542,8 @@
         color: #FFFFFF;
         padding: 0 8px;
         
-        &__destroy{
-          &:hover{
-            opacity: 0.7;
-          }
+        &:hover{
+          opacity: 0.7;
         }
       }
     }

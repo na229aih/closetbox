@@ -77,6 +77,12 @@
       padding: 6px;
       font-size: 13px;
       width: 10vw;
+      background: #333333;
+      color: #FFFFFF;
+
+      &:hover{
+        opacity: 0.7;
+      }
     }
   }
 }
@@ -85,6 +91,7 @@
   margin: 3vh 29vw;
   padding: 3vh 9vw;
   border: solid 1px rgb(210, 210, 210);
+  font-size: 12px;
 
   &__form{
     margin: 15px 0;
@@ -109,6 +116,22 @@
       padding: 6px;
       font-size: 13px;
       width: 10vw;
+      background: #333333;
+      color: #FFFFFF;
+
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__text{
+    line-height: 60px;
+    text-decoration: none;
+    color: #333333;
+
+    &:hover{
+      opacity: 0.7;
     }
   }
 }

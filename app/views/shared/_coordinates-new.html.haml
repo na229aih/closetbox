@@ -1,6 +1,15 @@
-= link_to "/coordinates/new" do
-  .coordinates-new
-    %p.text
-      coordinate new
-    %p.icon
-      = fa_icon "instagram"
+- if user_signed_in?
+  = link_to "/coordinates/new" do
+    .coordinates-new
+      %p.text
+        coordinate new
+      %p.icon
+        = fa_icon "instagram"
+
+- else
+  = link_to new_user_session_path do
+    .coordinates-new
+      %p.text
+        coordinate new
+      %p.icon
+        = fa_icon "instagram"

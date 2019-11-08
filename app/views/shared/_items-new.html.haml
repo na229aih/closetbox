@@ -1,6 +1,15 @@
-= link_to "/items/new" do
-  .items-new
-    %p.text
-      item new
-    %p.icon
-      = fa_icon "instagram"
+- if user_signed_in?
+  = link_to "/items/new" do
+    .items-new
+      %p.text
+        item new
+      %p.icon
+        = fa_icon "instagram"
+
+- else
+  = link_to new_user_session_path do
+    .items-new
+      %p.text
+        item new
+      %p.icon
+        = fa_icon "instagram"

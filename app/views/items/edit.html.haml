@@ -1,0 +1,28 @@
+= render "shared/header"
+
+.new-title
+  アイテムの編集
+
+.form
+  = form_with model: @item , data: { remote: false } do |f|
+    .form__image
+      = image_tag @item.image.url
+      = f.file_field :image, class: "form__image__input"
+    .form__box
+      = f.label :アイテム名, class: "form__box__label"
+      %br/
+      = f.text_field :name, placeholder: "アイテム名", class: "form__box__field"
+    .form__box
+      = f.label :カテゴリー, class: "form__box__label"
+      %br/
+      = f.select :category, [["アウター","アウター"],["トップス","トップス"],["パンツ","パンツ"],["靴","靴"],["バッグ","バッグ"],["小物","小物"]], {prompt:"--"}, class: "form__box__field"
+    .form__box
+      = f.label :サイズ, class: "form__box__label"
+      %br/
+      = f.select :size, [["XS","XS"],["S","S"],["M","M"],["L","L"],["XL","XL"],["XXL","XXL"]], {prompt:"--"}, class: "form__box__field"
+    .form__box
+      = f.label :ブランド, class: "form__box__label"
+      %br/
+      = f.text_field :brand, placeholder: "ブランド", class: "form__box__field"
+    .form__box
+      = f.submit "変更する", class: "form__box__button"
