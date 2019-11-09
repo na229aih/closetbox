@@ -1,24 +1,54 @@
-# README
+# Closet box
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### 洋服管理アプリケーション
+<br>
 
-Things you may want to cover:
+## アプリケーションの説明
 
-* Ruby version
+自分のクローゼットの中の洋服の写真を撮ってカテゴリ別に分けて保存が出来ます。  
+さらに、自分が保存したアイテムを組み合わせてコーディネートが投稿出来ます。  
+また、他のユーザーのコーディネートも見ることが出来て、いいねを付けたり、  
+コメントが出来るのでユーザー間の交流も行えます。
+<br><br>
 
-* System dependencies
+### デモ
 
-* Configuration
+![](https://s4.aconvert.com/convert/p3r68-cdx67/bf9gn-bc5y6.gif)
 
-* Database creation
+## 機能及び使用技術
 
-* Database initialization
+- 開発環境
+  - Mac OS
+  - 言語
+    - Ruby 2.5.1
+  - フレームワーク
+    - Rails 5.2.3
+  - フロントエンド
+    - Haml, Sass, JavaScript ライブラリ：jQuery
 
-* How to run the test suite
+- ユーザー新規登録・ログイン機能
+  - gem deviseを使用
 
-* Services (job queues, cache servers, search engines, etc.)
+- ユーザーマイページ機能
 
-* Deployment instructions
+- アイテム保存機能
+  - 画像アップロードに gem carrierwaveを使用
 
-* ...
+- アイテム編集機能及び削除機能
+
+- コーディネート投稿機能
+
+- コーディネート一覧表示機能
+
+- コーディネート詳細表示機能
+
+- コーディネート編集機能及び削除機能
+
+- コーディネートにコメント投稿機能及び削除機能
+
+- コーディネートにいいね機能
+
+- ユーザー間フォロー機能
+
+- アプリケーションのデプロイ
+  - AWS, EC2, S3
