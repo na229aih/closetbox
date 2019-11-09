@@ -102,7 +102,7 @@ class CoordinatesController < ApplicationController
     session[:shoes_item_id] = nil
     session[:bag_item_id] = nil
     session[:accessory_item_id] = nil
-    redirect_to root_path
+    redirect_to "/coordinates/#{params[:id]}"
   end
 
   def destroy
