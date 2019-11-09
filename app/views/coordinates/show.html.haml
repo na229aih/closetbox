@@ -155,6 +155,14 @@
     .coordinate-show__user-box__icon
       = fa_icon "comment-o"
       = @coordinate.comments.length
+    - if user_signed_in?
+      - if current_user == @coordinate.user
+        = link_to "/coordinates/#{@coordinate.id}/edit", class: "coordinate-link" do
+          .coordinate-link_button
+            編集する
+        = link_to "/coordinates/#{@coordinate.id}", method: "delete", class: "coordinate-link" do
+          .coordinate-link_button
+            削除する
   .coordinate-show__description
     = simple_format(@coordinate.description)
 
