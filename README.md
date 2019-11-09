@@ -23,7 +23,7 @@
   - 言語
     - Ruby 2.5.1
   - フレームワーク
-    - Rails 5.2.3
+    - Ruby on Rails 5.2.3
   - フロントエンド
     - Haml, Sass, JavaScript ライブラリ：jQuery
 
@@ -53,3 +53,4 @@
 
 - アプリケーションのデプロイ
   - AWS, EC2, S3を使用
+<br><br>
