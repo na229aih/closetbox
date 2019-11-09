@@ -26,6 +26,14 @@
     - Ruby on Rails 5.2.3
   - フロントエンド
     - Haml, Sass, JavaScript ライブラリ：jQuery
+  - データベース
+    - MySQL
+  - コード管理
+    - Git, GitHub
+  - エディタ
+    - Visual Studio Code
+  - デプロイ
+    - AWS, EC2, S3
 
 - ユーザー新規登録・ログイン機能
   - gem deviseを使用
@@ -50,7 +58,4 @@
 - コーディネートにいいね機能
 
 - ユーザー間フォロー機能
-
-- アプリケーションのデプロイ
-  - AWS, EC2, S3を使用
 <br><br>
