@@ -16,24 +16,27 @@
 ![](https://s4.aconvert.com/convert/p3r68-cdx67/bf9gn-bc5y6.gif)
 <br><br>
 
-## 機能及び使用技術
+## 開発環境
 
-- 開発環境
+- OS
   - Mac OS
-  - 言語
-    - Ruby 2.5.1
-  - フレームワーク
-    - Ruby on Rails 5.2.3
-  - フロントエンド
-    - Haml, Sass, JavaScript ライブラリ：jQuery
-  - データベース
-    - MySQL
-  - コード管理
-    - Git, GitHub
-  - エディタ
-    - Visual Studio Code
-  - デプロイ
-    - AWS, EC2, S3
+- 言語
+  - Ruby 2.5.1
+- フレームワーク
+  - Ruby on Rails 5.2.3
+- フロントエンド
+  - Haml, Sass, JavaScript ライブラリ：jQuery
+- データベース
+  - MySQL
+- コード管理
+  - Git, GitHub
+- エディタ
+  - Visual Studio Code
+- デプロイ
+  - AWS, EC2, S3
+<br><br>
+
+## アプリケーションの機能
 
 - ユーザー新規登録・ログイン機能
   - gem deviseを使用
