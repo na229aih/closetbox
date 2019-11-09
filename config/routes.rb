@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :items ,only: [:new, :create, :edit, :update, :destroy]
 
-  resources :coordinates ,only: [:new, :create, :show] do
+  resources :coordinates ,only: [:new, :create, :show, :edit, :update, :destroy] do
     resources :comments, only: [:create, :destroy]
     collection do
       get '/select_outer' => 'coordinates#select_outer', defaults: { format: 'json' }
