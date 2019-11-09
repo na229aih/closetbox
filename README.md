@@ -1,6 +1,6 @@
 # Closet box
 
-### 洋服管理アプリケーション
+洋服管理アプリケーション
 <br>
 
 ## アプリケーションの説明
@@ -14,6 +14,7 @@
 ### デモ
 
 ![](https://s4.aconvert.com/convert/p3r68-cdx67/bf9gn-bc5y6.gif)
+<br><br>
 
 ## 機能及び使用技術
 
