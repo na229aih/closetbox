@@ -150,8 +150,18 @@
     .coordinate-show__user-box__time
       = @coordinate.created_at.strftime("%Y/%m/%d %H:%M")
     .coordinate-show__user-box__icon
-      = fa_icon "heart-o"
-      0
+      - if user_signed_in?
+        - if current_user.likes.find_by(coordinate_id: @coordinate.id)
+          = fa_icon "heart", class: "like", data: {coordinate_id: @coordinate.id}
+          %span.likes-count
+            = @coordinate.likes.length
+        - else
+          = fa_icon "heart-o", class: "unlike", data: {coordinate_id: @coordinate.id}
+          %span.likes-count
+            = @coordinate.likes.length
+      - else
+        = fa_icon "heart-o", data: {coordinate_id: @coordinate.id}
+        = @coordinate.likes.length
     .coordinate-show__user-box__icon
       = fa_icon "comment-o"
       = @coordinate.comments.length
