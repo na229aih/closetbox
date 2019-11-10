@@ -13,22 +13,59 @@
     .user-show-box__name__top-box
       = @user.name
     .user-show-box__name__bottom-box
-      %p.text
+      .text
         アイテム
         = @user.items.length
         個
-      %p.text
+      .text
         投稿
         = @user.coordinates.length
         件
-      %p.text
-        フォロワー0人
-      %p.text
-        フォロー中0人
+      .following-text
+        フォロー中
+        = @user.followings.length
+        人
+      .follower-text
+        フォロワー
+        = @user.followers.length
+        人
 
   - if current_user == @user
     .user-show-box__logout
       = link_to "Logout", destroy_user_session_path, method: :delete
+
+  - if user_signed_in?
+    - unless current_user == @user
+      - if current_user.relationships.find_by(follow_id: @user.id)
+        .user-show-box__unfollow{data: {follow_id: @user.id}}
+          フォロー中
+      - else
+        .user-show-box__follow{data: {follow_id: @user.id}}
+          フォローする
+
+  .user-show-box__followings
+    - @user.followings.each do |user|
+      = link_to "/users/#{user.id}" do
+        .user-show-box__followings__user
+          .user-show-box__followings__user__image
+            - if user.image.url.present?
+              = image_tag user.image.url
+            - else 
+              = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+          .user-show-box__followings__user__name
+            = user.name
+
+  .user-show-box__followers
+    - @user.followers.each do |user|
+      = link_to "/users/#{user.id}" do
+        .user-show-box__followers__user
+          .user-show-box__followers__user__image
+            - if user.image.url.present?
+              = image_tag user.image.url
+            - else 
+              = image_tag "https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg"
+          .user-show-box__followers__user__name
+            = user.name
 
 .item-box
   .item-box__category
