@@ -5,4 +5,5 @@ class User < ApplicationRecord
   has_many :items
   has_many :coordinates
   has_many :comments
+  has_many :likes, dependent: :destroy
 end
