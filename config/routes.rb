@@ -4,7 +4,12 @@ Rails.application.routes.draw do
 
   root 'coordinates#index'
 
-  resources :users ,only: [:show]
+  resources :users ,only: [:show] do
+    collection do
+      post '/follow' => 'users#follow', defaults: { format: 'json' }
+      delete '/unfollow' => 'users#unfollow', defaults: { format: 'json' }
+    end
+  end
 
   resources :items ,only: [:new, :create, :edit, :update, :destroy]
 
