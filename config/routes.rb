@@ -20,4 +20,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :likes, only: [] do
+    collection do
+      post '/create' => 'likes#create', defaults: { format: 'json' }
+      delete '/destroy' => 'likes#destroy', defaults: { format: 'json' }
+    end
+  end
+
 end
