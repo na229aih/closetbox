@@ -32,8 +32,8 @@
   - Git, GitHub
 - エディタ
   - Visual Studio Code
-- デプロイ
-  - AWS, EC2, S3
+<!-- - デプロイ
+  - AWS, EC2, S3 -->
 <br><br>
 
 ## アプリケーションの機能
