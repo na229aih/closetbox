@@ -4,4 +4,8 @@ class Item < ApplicationRecord
   belongs_to :user
   has_many :coordinate_items
   has_many :coordinates, through: :coordinate_items
+
+  validates :name, presence: true
+  validates :image, presence: true
+  validates :category, presence: true
 end
