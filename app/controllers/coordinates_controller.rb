@@ -15,25 +15,35 @@ class CoordinatesController < ApplicationController
   end
 
   def create
-    Coordinate.create(
-      description: coordinate_params[:description],
-      item_ids: [
-        session[:outer_item_id],
-        session[:tops_item_id],
-        session[:pants_item_id],
-        session[:shoes_item_id],
-        session[:bag_item_id],
-        session[:accessory_item_id]
-      ],
-      user_id: current_user.id
-    )
-    session[:outer_item_id] = nil
-    session[:tops_item_id] = nil
-    session[:pants_item_id] = nil
-    session[:shoes_item_id] = nil
-    session[:bag_item_id] = nil
-    session[:accessory_item_id] = nil
-    redirect_to root_path
+    if (session[:tops_item_id] && session[:pants_item_id]).present?
+      Coordinate.create(
+        description: coordinate_params[:description],
+        item_ids: [
+          session[:outer_item_id],
+          session[:tops_item_id],
+          session[:pants_item_id],
+          session[:shoes_item_id],
+          session[:bag_item_id],
+          session[:accessory_item_id]
+        ],
+        user_id: current_user.id
+      )
+      session[:outer_item_id] = nil
+      session[:tops_item_id] = nil
+      session[:pants_item_id] = nil
+      session[:shoes_item_id] = nil
+      session[:bag_item_id] = nil
+      session[:accessory_item_id] = nil
+      redirect_to root_path
+    else
+      session[:outer_item_id] = nil
+      session[:tops_item_id] = nil
+      session[:pants_item_id] = nil
+      session[:shoes_item_id] = nil
+      session[:bag_item_id] = nil
+      session[:accessory_item_id] = nil
+      redirect_to "/coordinates/new"
+    end
   end
 
   def select_outer

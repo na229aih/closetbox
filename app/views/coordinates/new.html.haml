@@ -18,7 +18,7 @@
 
   .item-select__category
     .item-select_category__title
-      トップスを選択
+      トップスを選択（必須）
     - if @tops_items.present?
       .item-select__category__image
         - @tops_items.each do |item|
@@ -29,7 +29,7 @@
 
   .item-select__category
     .item-select_category__title
-      パンツを選択
+      パンツを選択（必須）
     - if @pants_items.present?
       .item-select__category__image
         - @pants_items.each do |item|
