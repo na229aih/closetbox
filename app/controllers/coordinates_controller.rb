@@ -1,7 +1,7 @@
 class CoordinatesController < ApplicationController
 
   def index
-    @coordinates = Coordinate.all.order("id DESC")
+    @coordinates = Coordinate.all.order("id DESC").page(params[:page]).per(12)
   end
 
   def new
