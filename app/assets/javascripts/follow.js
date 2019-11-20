@@ -58,7 +58,7 @@ $(function(){
       $(".user-show-box__name__bottom-box").append(followerLength);
       let followerLinks = $(".user-show-box__followers").children();
       followerLinks.each(function(index, followerLink){
-      if(followerLink.href == `http://localhost:3000/users/${user.id}`)
+      if(followerLink.href.match(`/users/${user.id}`))
         followerLink.remove();
       });
     })
