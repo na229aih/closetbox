@@ -11,6 +11,13 @@
 ユーザー間の交流が行えます。
 <br><br>
 
+## 接続先情報
+
+- [URL](http://18.177.14.233/)
+- テスト用ログインアカウント
+  - メールアドレス：hoge@gmail.com
+  - パスワード：hogehoge
+
 ### デモ
 
 ![](https://s4.aconvert.com/convert/p3r68-cdx67/bf9gn-bc5y6.gif)
