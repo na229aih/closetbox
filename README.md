@@ -21,7 +21,8 @@
 
 ### デモ
 
-![](images/closetbox録画1.mov.gif)
+![](app/assets/images/closetbox録画1.mov.gif)
+![](app/assets/images/closetbox録画2.mov.gif)
 <br><br>
 
 ## 開発環境
