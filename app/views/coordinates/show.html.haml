@@ -168,10 +168,10 @@
     - if user_signed_in?
       - if current_user == @coordinate.user
         = link_to "/coordinates/#{@coordinate.id}/edit", class: "coordinate-link" do
-          .coordinate-link_button
+          .coordinate-link__button
             編集する
         = link_to "/coordinates/#{@coordinate.id}", method: "delete", class: "coordinate-link" do
-          .coordinate-link_button
+          .coordinate-link__button-delete
             削除する
   .coordinate-show__description
     = simple_format(@coordinate.description)
