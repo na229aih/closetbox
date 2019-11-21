@@ -15,17 +15,16 @@
 
 - URL：http://18.177.14.233/
 
-- テスト用ログインアカウント  
+- テスト用ログインアカウント
   - メールアドレス：hoge@gmail.com
   - パスワード：hogehoge
 
 ### デモ
 
-![](https://s4.aconvert.com/convert/p3r68-cdx67/bf9gn-bc5y6.gif)
+![](images/closetbox録画1.mov.gif)
 <br><br>
 
 ## 開発環境
-
 - OS
   - Mac OS
 - 言語
